@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+      <ion-title>Perfil</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <ion-list>
+      <ion-item>
+        <ion-label>{{ user.name}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>{{ user.email }}</ion-label>
+      </ion-item>
+    </ion-list>
+    
+    <ion-button expand="block" color="primary" [routerLink]="['/lista-pedido']">Meus pedidos</ion-button> 
+    <ion-button expand="block"  fill="outline" color="secondary" [routerLink]="['/endereco']">Meus Endereços</ion-button> 
+    <ion-button expand="block" color="dark" (click)="sair()">Sair</ion-button> 
+  
+  </ion-content>
+<ion-content>
+  <ion-fab vertical="bottom" horizontal="end" style="margin-bottom: 50px;" slot="fixed">
+    <ion-fab-button [routerLink]="['/carrinho']" color="secondary">
+      <ion-icon name="cart"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+
+  
