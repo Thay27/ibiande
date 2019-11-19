@@ -94,7 +94,7 @@ total: number = 0;
       this.carrinhoService.insert(this.form.value)
         .then( () => {
           this.toast.show('Produto adicionado com sucesso !!!');
-          this.router.navigate(['/produtos']);
+          this.router.navigate(['/catalogo']);
         })
     }
   }
